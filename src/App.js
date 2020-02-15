@@ -73,7 +73,7 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/tournaments" component={Tournaments} />
             <Route path="/guides" component={Guides} />
-            <Route path="/comps" component={recipes} />
+            <Route path="/recipes" component={recipes} />
             <Route path="/recipechat" component={RecipeChat} />
             <Footer></Footer>
 
