@@ -4,8 +4,8 @@ import './Header.css'
 
 function Header(props) {
     return (
-        <header style={{'background': props.colour, 'display': props.display}}>
-            <Link className="title" to="/">Teamfight <span style={{'color': props.accent}}>UTSC</span></Link>
+        <header style={{'background': props.colour, 'display': props.display, boxShadow:"0 0px 1px rgb(51,51,51)"}}>
+            <Link className="title" to="/"> <span style={{'color': props.accent}}>Cooking 101</span></Link>
             <div className="link-container">
                 <Link className="link-style" to='/'>Home</Link>
                 <Link className="link-style" to='/about'>About</Link>

@@ -11,7 +11,7 @@ function Index() {
     return (
         <Fragment>
         <div className="welcome-container">
-          <h1>Teamfight UTSC</h1>
+          <h1>Cooking 101</h1>
         </div>
         
 
