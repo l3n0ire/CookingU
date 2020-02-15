@@ -18,8 +18,12 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "start_url": "https://htvwin.netlify.com/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "url": "https://htvwin.netlify.com",
+    "lang": "",
+    "screenshots": [],
+    "orientation": "portrait"
 }

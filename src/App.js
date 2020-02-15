@@ -8,7 +8,7 @@ import Guides from './components/pages/Guides.jsx';
 import Index from './components/pages/Main'
 import Footer from './components/Layout/Footer.jsx';
 import Sidebar from './components/Layout/Sidebar.jsx';
-import Comps from './components/pages/Comps.jsx';
+import recipes from './components/pages/recipes.jsx';
 
 import ScrollToTop from 'react-router-scroll-top'
 import { json } from 'body-parser';
@@ -45,8 +45,8 @@ class App extends Component {
   }
   listenScrollEvent = e => {
     if (window.scrollY > 200) {
-      this.setState({ color: '#192841' })
-      this.setState({ accent: 'orange' })
+      this.setState({ color: 'green' })
+      this.setState({ accent: 'white' })
       this.setState({ textdisplay: 'inline' })
     } else {
       this.setState({ color: 'rgba(0,0,0,0)' })
@@ -73,8 +73,8 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/tournaments" component={Tournaments} />
             <Route path="/guides" component={Guides} />
-            <Route path="/comps" component={Comps} />
-            <Route path="/recipechat" component={RecipeChat}/>
+            <Route path="/comps" component={recipes} />
+            <Route path="/recipechat" component={RecipeChat} />
             <Footer></Footer>
 
           </div>
