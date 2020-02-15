@@ -8,7 +8,7 @@ import Guides from './components/pages/Guides.jsx';
 import Index from './components/pages/Main'
 import Footer from './components/Layout/Footer.jsx';
 import Sidebar from './components/Layout/Sidebar.jsx';
-import recipes from './components/pages/recipes.jsx';
+import Recipes from './components/pages/Recipes.jsx';
 
 import ScrollToTop from 'react-router-scroll-top'
 import { json } from 'body-parser';
@@ -73,7 +73,7 @@ class App extends Component {
             <Route path="/about" component={About} />
             <Route path="/tournaments" component={Tournaments} />
             <Route path="/guides" component={Guides} />
-            <Route path="/comps" component={recipes} />
+            <Route path="/recipes" component={Recipes} />
             <Route path="/recipechat" component={RecipeChat} />
             <Footer></Footer>
 

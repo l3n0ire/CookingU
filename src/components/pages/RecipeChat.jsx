@@ -58,7 +58,7 @@ export default class RecipeChat extends Component {
 
         this.setState({ userMessage: '' });
     };
-
+    
     render() {
 
         const chat = this.state.conversation.map((e, index) =>

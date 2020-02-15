@@ -1,11 +1,14 @@
+'use strict';
 require('dotenv').config({ path: 'variables.env' });
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
 const cors = require('cors');
 const processMessage = require('./process-message');
 
 const app = express();
+const router = express.Router();
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -16,7 +19,8 @@ app.post('/chat', (req, res) => {
   processMessage(message);
 });
 
-app.set('port', process.env.PORT || 5000);
-const server = app.listen(app.get('port'), () => {
-  console.log(`Express running → PORT ${server.address().port}`);
-})
+//app.set('port', process.env.PORT || 5000);
+app.use('/.netlify/functions/server', router);  // path must route to lambda
+
+module.exports = app;
+module.exports.handler = serverless(app);

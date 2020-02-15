@@ -6,7 +6,7 @@ import {Fragment} from 'react';
 
 const metaComps = data.recipes;
 
-function Comps() {
+function Recipes() {
     return (
         <Fragment>
         <div>
@@ -44,5 +44,5 @@ function Comps() {
     )
 }
 
-export default Comps
+export default Recipes
 
