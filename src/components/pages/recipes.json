@@ -1,0 +1,37 @@
+{
+    "recipes":[
+        {
+            "time":"10 min",
+            "title":"Hot Dog",
+            "ingredients":[
+                    "hot dog",
+                    "bread",
+                    "Ketchup",
+                    "mustard"
+                    
+
+                
+            ]
+            
+        },
+
+        {
+            "time":"20 min",
+            "title":"Pasta",
+            "ingredients":[
+                
+                "Pasta",
+                "Tomato",
+                "Meat",
+                "Salt",
+                "Cheese"
+                
+
+                
+                
+            ]
+            
+        }
+
+    ]
+}
