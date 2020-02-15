@@ -17,8 +17,7 @@ function Index() {
 
         <div className="container">
             <div className="box-row">
-                <Link className="linky" to='/tournaments'>
-                    <div className="box">
+                    <div className="box2">
                         <img src={hotdog} alt="oops"/>
                         <div className="box-text">
                             <h1>Hot Dog</h1>
@@ -28,8 +27,7 @@ function Index() {
                             </p>
                         </div>
                     </div>
-                </Link>
-                <Link className="linky" to='/guides'>
+                
                     <div className="box">
                         <img src={spaghetti} alt="oops"/>
                         <div className="box-text">
@@ -39,8 +37,6 @@ function Index() {
                             </p>
                         </div>
                     </div>
-                </Link>
-                <Link className="linky" to='/guides'>
                     <div className="box">
                         <img src={pasta} alt="oops"/>
                         <div className="box-text">
@@ -50,7 +46,6 @@ function Index() {
                             </p>
                         </div>
                     </div>
-                </Link>
             </div>
 
         </div>
