@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Tournaments from './components/pages/Tournaments.jsx';
 import Header from './components/Layout/Header.jsx';
@@ -11,16 +11,18 @@ import Sidebar from './components/Layout/Sidebar.jsx';
 import recipes from './components/pages/recipes.jsx';
 
 import ScrollToTop from 'react-router-scroll-top'
+import { json } from 'body-parser';
+import RecipeChat from './components/pages/RecipeChat.jsx';
 
 
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      width: 1024, 
-      color:'rgba(0,0,0,0)',
-      accent:'white',
+    this.state = {
+      width: 1024,
+      color: 'rgba(0,0,0,0)',
+      accent: 'white',
       display: 'flex',
       displayM: 'none',
       textdisplay: 'none',
@@ -31,55 +33,54 @@ class App extends Component {
     document.title = 'Teamfight UTSC';
     this.updateWindowDimensions();
     window.addEventListener('scroll', this.listenScrollEvent)
-    
+
     window.addEventListener('resize', this.updateWindowDimensions);
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
   }
   updateWindowDimensions() {
-    this.setState({width: window.innerWidth});
-    
+    this.setState({ width: window.innerWidth });
+
   }
   listenScrollEvent = e => {
     if (window.scrollY > 200) {
-      this.setState({color: 'green'})
-      this.setState({accent: 'white'})
-      this.setState({textdisplay: 'inline'})
+      this.setState({ color: 'green' })
+      this.setState({ accent: 'white' })
+      this.setState({ textdisplay: 'inline' })
     } else {
-      this.setState({color: 'rgba(0,0,0,0)'})
-      this.setState({accent: 'white'})
-      this.setState({textdisplay: 'none'})
+      this.setState({ color: 'rgba(0,0,0,0)' })
+      this.setState({ accent: 'white' })
+      this.setState({ textdisplay: 'none' })
     }
   }
+  render() {
+    return (
+      /* 
+        all styling is in app.css
+        all pages have <Header/> header styling is in header.js
   
+      */
+      <Router>
+        <ScrollToTop>
+          <div className="App">
 
-  render(){
-  return (
-    /* 
-      all styling is in app.css
-      all pages have <Header/> header styling is in header.js
-
-    */
-    <Router>
-      <ScrollToTop>
-    <div className="App">
-
-      <Header colour={this.state.color} accent={this.state.accent} display={this.state.width < 1024? "none": "flex"}/>
-      <Sidebar colour={this.state.color} accent={this.state.accent} display={this.state.width < 1024? "flex": "none"} textdisplay={this.state.textdisplay}></Sidebar>
+            <Header colour={this.state.color} accent={this.state.accent} display={this.state.width < 1024 ? "none" : "flex"} />
+            <Sidebar colour={this.state.color} accent={this.state.accent} display={this.state.width < 1024 ? "flex" : "none"} textdisplay={this.state.textdisplay}></Sidebar>
 
 
-      <Route exact path="/" component={Index}/>
-      <Route path="/about" component = {About}/>
-      <Route path="/tournaments" component = {Tournaments}/>
-      <Route path="/guides" component = {Guides}/>
-      <Route path="/recipes" component = {recipes}/>
-      <Footer></Footer>
+            <Route exact path="/" component={Index} />
+            <Route path="/about" component={About} />
+            <Route path="/tournaments" component={Tournaments} />
+            <Route path="/guides" component={Guides} />
+            <Route path="/comps" component={recipes} />
+            <Route path="/recipechat" component={RecipeChat} />
+            <Footer></Footer>
 
-    </div>
-    </ScrollToTop>
-    </Router>
-  );
+          </div>
+        </ScrollToTop>
+      </Router >
+    );
   }
 }
 
