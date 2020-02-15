@@ -58,11 +58,11 @@ export default class RecipeChat extends Component {
 
         this.setState({ userMessage: '' });
     };
-
+    
     render() {
 
         const chat = this.state.conversation.map((e, index) =>
-            <ChatBubble text={e.text} i={index} className={e.user} />
+            <ChatBubble key={index} text={e.text} i={index} className={e.user} />
         );
 
         return (

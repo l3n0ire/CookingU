@@ -17,6 +17,7 @@ footer p{
 }
 .box-left h1{
     margin-bottom: 2vh;
+    text-align:left;
 }
 .box-right{
     padding:1em;
