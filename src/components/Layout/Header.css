@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.link-style{
+    color:#fff;
+    text-decoration:none;
+    margin:auto;
+    padding-right:5vw;
+}
+.link-container{
+    color:#fff;
+    text-decoration:none;
+    margin:auto;    
+    flex-basis:50%;
+}
+header{
+    color:#fff;
+    height :5em;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    transition: background 0.5s;
+    padding:1em 8vw;    
+    align-items : center;
+    justify-content: center;
+}
+.title{
+    color:#fff;
+    text-decoration:none;
+    font-size: 2em;
+    font-weight: 700;
+    flex-basis: 50%;
+}
+.active{
+    background: black;
+}

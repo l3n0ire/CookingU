@@ -1,0 +1,42 @@
+{
+    "metaComps":[
+        {
+            "tier":"S",
+            "title":"Poison Rangers",
+            "champs":[
+                    "Varus",
+                    "DrMundo",
+                    "Kindred",
+                    "Ashe",
+                    "Twitch",
+                    "Amumu",
+                    "Singed",
+                    "Taric"
+
+                
+            ]
+            
+        },
+
+        {
+            "tier":"S",
+            "title":"6 Light",
+            "champs":[
+                
+                "Leona",
+                "Nasus",
+                "Vayne",
+                "Jax",
+                "Aatrox",
+                "Karma",
+                "Soraka",
+                "Yorick"
+
+                
+                
+            ]
+            
+        }
+
+    ]
+}
