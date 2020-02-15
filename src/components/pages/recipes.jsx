@@ -7,6 +7,8 @@ import {Fragment} from 'react';
 const metaComps = data.recipes;
 
 function Recipes() {
+
+
     return (
         <Fragment>
         <div>
@@ -16,8 +18,9 @@ function Recipes() {
             
             <div className="container">
             <div className="box-row">
-
             {
+                // Recipies taken from https://www.telegraph.co.uk/recipes/0/30-recipes-you-should-master-by-the-age-of-30/
+                // use this for images
                 metaComps.map(reci => 
                      <div className="box">
                          <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>

@@ -8,10 +8,7 @@
                     "hot dog",
                     "bread",
                     "Ketchup",
-                    "mustard"
-                    
-
-                
+                    "mustard"  
             ]
             
         },
@@ -21,18 +18,43 @@
             "title":"Pasta",
             "image":"pasta",
             "ingredients":[
-                
                 "Pasta",
                 "Tomato",
                 "Meat",
                 "Salt",
-                "Cheese"
-                
+                "Cheese" 
+            ]  
+        },
 
-                
-                
-            ]
-            
+        {
+            "time":"20 min",
+            "title":"Spaghetti with garlic, chilli and parsley ",
+            "image":"pasta",
+            "ingredients":[
+                "Spaghetti",
+                "Olive Oil",
+                "Garlic Cloves",
+                "Dried Chili Flakes",
+                "Parseley",
+                "Grated Parmesan"      
+            ]  
+        },
+        {
+            "time":"3 Hours","title":"Shepard's Pie","image":"pasta","ingredients":["1 tbsp vegetable oil","500g lamb mince","1 large onion, finely diced","1 large carrot, finely diced","2 sticks celery, finely diced","2 garlic cloves, crushed","10g dried ceps (porcini) mushrooms, ground into a powder (I blitz them in a coffee grinder)","200g cherry tomatoes, blitzed to a liquid","1 tbsp tomato purée","1 tbsp Worcestershire sauce","450g hot, fresh chicken stock","1 tbsp mushroom ketchup","1 sprig each of thyme and rosemary","1 tbsp crème fraîche"]
+        },
+
+        {
+            "time":"2.5 Hours","title":"Bolognese ragu sauce","image":"pasta","ingredients":["200g streaky bacon, cut into batons","1 tbsp olive oil","750g ground beef – if possible, ask your butcher for beef neck or flank with a wide grind","1 medium onion, finely diced","1 medium carrot, finely diced","2 celery stalks, finely diced","250g cherry tomatoes, blitzed in a blender","1 tbsp tomato purée","250ml fresh chicken stock","250ml whole milk","100g unsalted butter"]  
+        },
+
+        {
+            "time":"15 Minutes","title":"Five-spice chicken and vegetable stir-fry","image":"hotdog","ingredients":["4 tbsp soy sauce","4 tbsp honey","2 tbsp rice wine vinegar","1 tbsp sesame oil","2 tsp cornflour","2 x 150g chicken breasts, cut into small pieces","2 tsp Chinese five-spice","2 tbsp sunflower oil","2 garlic cloves, thinly sliced","2cm piece of fresh ginger, peeled and cut into matchsticks","1 red and 1 yellow pepper, deseeded and cut into strips","½ small head of broccoli, broken into little florets","200g sugarsnap peas","2 baby bok choy, quartered"]
+        },
+        {
+            "time":"2 Hours","title":"Pho ga chicken noodle soup with crispy chicken skin","image":"hotdog","ingredients":["4 chicken thighs, skin on and bone in","60g ginger","2 shallots","500ml chicken stock (home-made, or it’s worth splashing out on a carton from the chiller cabinet if you can)","2 star anise","160g pak choi","160g carrots","160g radishes","160g shiitake mushrooms","2 tsp Vietnamese or Thai fish sauce","1 red chilli, thinly sliced","50g rice noodles (dried, not ready to eat)","160g bean sprouts","2 spring onions, thinly sliced","Fresh mint, coriander, and lime wedges to serve"]
+        },
+        {
+            "time":"45 Minutes","title":"American pancakes with honey-roasted pear, walnut, and vanilla ice cream","image":"hotdog","ingredients":["125g self-raising flour","A pinch of sea salt flakes","2 eggs, separated","120ml milk","10g butter","1 pear","50g walnuts","20g butter","A pinch of ground cinnamon","50ml runny honey","Vanilla ice cream, to serve"]
         }
 
     ]
