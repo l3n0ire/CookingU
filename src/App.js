@@ -30,7 +30,7 @@ class App extends Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentDidMount() {
-    document.title = 'Teamfight UTSC';
+    document.title = 'CookingU';
     this.updateWindowDimensions();
     window.addEventListener('scroll', this.listenScrollEvent)
 
