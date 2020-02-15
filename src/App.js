@@ -8,7 +8,7 @@ import Guides from './components/pages/Guides.jsx';
 import Index from './components/pages/Main'
 import Footer from './components/Layout/Footer.jsx';
 import Sidebar from './components/Layout/Sidebar.jsx';
-import Recipes from './components/pages/Recipes.jsx';
+import Recipes from './components/pages/recipes.jsx';
 
 import ScrollToTop from 'react-router-scroll-top'
 import { json } from 'body-parser';
