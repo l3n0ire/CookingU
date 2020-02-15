@@ -1,9 +1,9 @@
 import React from 'react';
 import {Fragment} from 'react';
 import './styles/Main.css'
-import tournament from './images/tournament.jpg'
-import tutorial from './images/tutorial.jpg'
-import guide from './images/guide.jpg'
+import hotdog from './images/hotdog.jpeg'
+import spaghetti from './images/spaghetti.jpg'
+import pasta from './images/pasta.jpg'
 import {Link} from 'react-router-dom';
 
 
@@ -16,7 +16,7 @@ function Index() {
         
 
         <div className="container">
-            <h1>Who are we?</h1>
+            <h1>Dont know what to cook or what to make?</h1>
             <p>
                 We’re a group with a strong passion for the game Teamfight Tactics. Teamfight UTSC  holds tournaments 
                 and tutorials for both newcomers and experienced players. Our goal is to provide training sessions, 
@@ -24,14 +24,14 @@ function Index() {
                 UTSC’s mission is to introduce new players to competitive or casual Teamfight Tactics.
 
             </p>
-            <h1>What we do?</h1>
+            <h1>Featured Recipes</h1>
 
             <div className="box-row">
                 <Link className="linky" to='/tournaments'>
                     <div className="box">
-                        <img src={tournament} alt="oops"/>
+                        <img src={hotdog} alt="oops"/>
                         <div className="box-text">
-                            <h1>Tournaments</h1>
+                            <h1>Hot Dog</h1>
                             <p>
                                 Opportunity to gain first-hand experience casual and competitive tournament environment.
                                 
@@ -41,9 +41,9 @@ function Index() {
                 </Link>
                 <Link className="linky" to='/guides'>
                     <div className="box">
-                        <img src={tutorial} alt="oops"/>
+                        <img src={spaghetti} alt="oops"/>
                         <div className="box-text">
-                            <h1>Tutorials</h1>
+                            <h1>Spaghetti</h1>
                             <p>
                             Gain valuable feedback and advice from experienced players to improve gameplay
                             </p>
@@ -52,9 +52,9 @@ function Index() {
                 </Link>
                 <Link className="linky" to='/guides'>
                     <div className="box">
-                        <img src={guide} alt="oops"/>
+                        <img src={pasta} alt="oops"/>
                         <div className="box-text">
-                            <h1>Guides</h1>
+                            <h1>Pasta</h1>
                             <p>
                                 Comprehensive guides that introduce new players to all aspects of the game from start to finish.
                             </p>
