@@ -42,12 +42,20 @@ body{
   font-size: 3em;
 }
 .box-row{
-  grid-auto-rows: 1fr  
+  grid-template-rows: (3, 1fr);  
 }
 .box{
   margin-bottom: 2em;
   background-color: #fff;
   border: 1px #d3d3d3 solid;
+}
+
+.box2 {
+  
+  margin-bottom: 2em;
+  background-color: #fff;
+  border: 1px #d3d3d3 solid;
+  grid-column: 1/ span 3;
 }
 
 
@@ -56,6 +64,13 @@ body{
   margin:0;
   max-height: 80vh;
 }
+
+.box2 img{
+  width:100%;
+  margin:0;
+  max-height: 80vh;
+}
+
 .box-text{
   margin:-1em 0;
   padding:1.5em;
@@ -68,11 +83,6 @@ body{
 }
 .box-text p{
   font-size: 1.3em;
-}
-
-.linky {
-  text-decoration: none;
-  color: black;
 }
 
 @media only screen and (min-width: 768px) {

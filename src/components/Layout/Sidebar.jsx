@@ -19,8 +19,6 @@ export default function Sidebar(props) {
                     <ul>
                       <li> <Link className="link-style" to='/'>Home</Link></li>
                       <li><Link className="link-style" to='/about'>About</Link></li>
-                      <li><Link className="link-style" to='/tournaments'>Tournaments</Link></li>
-                      <li><Link className="link-style" to='/guides'>Guides</Link></li>
                       <li><Link className="link-style" to='/comps'>Recipes</Link></li>
                       <li><Link className="link-style" to='/recipechat'>Recipe Chat</Link></li>
                     </ul>

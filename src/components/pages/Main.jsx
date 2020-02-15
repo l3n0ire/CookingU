@@ -16,19 +16,8 @@ function Index() {
         
 
         <div className="container">
-            <h1>Dont know what to cook or what to make?</h1>
-            <p>
-                We’re a group with a strong passion for the game Teamfight Tactics. Teamfight UTSC  holds tournaments 
-                and tutorials for both newcomers and experienced players. Our goal is to provide training sessions, 
-                guides, and tournaments to help players develop their skills and improve their gameplay. Teamfight 
-                UTSC’s mission is to introduce new players to competitive or casual Teamfight Tactics.
-
-            </p>
-            <h1>Featured Recipes</h1>
-
             <div className="box-row">
-                <Link className="linky" to='/tournaments'>
-                    <div className="box">
+                    <div className="box2">
                         <img src={hotdog} alt="oops"/>
                         <div className="box-text">
                             <h1>Hot Dog</h1>
@@ -38,8 +27,7 @@ function Index() {
                             </p>
                         </div>
                     </div>
-                </Link>
-                <Link className="linky" to='/guides'>
+                
                     <div className="box">
                         <img src={spaghetti} alt="oops"/>
                         <div className="box-text">
@@ -49,8 +37,6 @@ function Index() {
                             </p>
                         </div>
                     </div>
-                </Link>
-                <Link className="linky" to='/guides'>
                     <div className="box">
                         <img src={pasta} alt="oops"/>
                         <div className="box-text">
@@ -60,7 +46,6 @@ function Index() {
                             </p>
                         </div>
                     </div>
-                </Link>
             </div>
 
         </div>
