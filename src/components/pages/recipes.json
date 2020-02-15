@@ -3,6 +3,7 @@
         {
             "time":"10 min",
             "title":"Hot Dog",
+            "image":"hotdog",
             "ingredients":[
                     "hot dog",
                     "bread",
@@ -18,6 +19,7 @@
         {
             "time":"20 min",
             "title":"Pasta",
+            "image":"pasta",
             "ingredients":[
                 
                 "Pasta",

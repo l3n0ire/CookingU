@@ -20,7 +20,8 @@ function Comps() {
             {
                 metaComps.map(reci => 
                      <div className="box">
-                                                 <div className="box-text">
+                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
+                        <div className="box-text">
 
                         <h1>{reci.title}</h1> <p>{reci.time+" to prepare"}</p>
                         {
