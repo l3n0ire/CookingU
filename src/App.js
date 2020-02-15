@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Tournaments from './components/pages/Tournaments.jsx';
 import Header from './components/Layout/Header.jsx';
 import About from './components/pages/About.jsx';
-import Guides from './components/pages/Guides.jsx';
 import Index from './components/pages/Main'
 import Footer from './components/Layout/Footer.jsx';
 import Sidebar from './components/Layout/Sidebar.jsx';
@@ -71,8 +69,6 @@ class App extends Component {
 
             <Route exact path="/" component={Index} />
             <Route path="/about" component={About} />
-            <Route path="/tournaments" component={Tournaments} />
-            <Route path="/guides" component={Guides} />
             <Route path="/recipes" component={Recipes} />
             <Route path="/recipechat" component={RecipeChat} />
             <Footer></Footer>
