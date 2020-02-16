@@ -69,11 +69,13 @@ body{
   grid-column: 1/ span 3;
   z-index: 3;
 }
-.megabox .grid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 
-}
+
+.megabox .grid{
+    
+  display: flex;
+  flex-wrap: wrap;
+  }
 .megabox .reciTitle{
   height:20em;
   text-align:center;
@@ -84,9 +86,8 @@ body{
   line-height: 1.2em;
 }
 .megabox img{
-  height:20em;
+  width:100%;
   margin:0;
-  max-height: 80vh;
 }
 .megabox .ingredients{
   float:left;
@@ -135,6 +136,7 @@ body{
   padding:1.5em;
   padding-bottom: 3em;
 }
+
 .box-text h1{
   font-size: 2em;
   margin-top:0;
@@ -145,6 +147,7 @@ body{
 }
 
 @media only screen and (min-width: 768px) {
+  
   .box-row{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -159,6 +162,17 @@ body{
 
 }
 @media only screen and (min-width: 1025px) {
+  .megabox .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+  }
+  .megabox img{
+    height:20em;
+    width: auto;
+    margin:0;
+    max-width: 40vw;
+  }
   .welcome-container h1{
     font-size: 8em;
   }
