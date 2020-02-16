@@ -4,7 +4,7 @@ import Pusher from 'pusher-js';
 import ChatBubble from '../general/ChatBubble';
 import RecipeCard from '../general/RecipeCard';
 import './styles/RecipeChat.css';
-import cookingMa from './images/cooking-ma.jpeg'
+import cookingMa from './images/cooking-ma.png'
 
 export default class RecipeChat extends Component {
     constructor(props) {
