@@ -41,11 +41,12 @@ handleRandom = () => {
 }
 
 mega= (e) =>{
-    if(e.target.className=="box"){
-        e.target.className="megabox";
+    if(e.currentTarget.className=="box"){
+        e.currentTarget.className="megabox";
+        
     }
-    else  if(e.target.className=="megabox"){
-        e.target.className="box";
+    else  if(e.currentTarget.className=="megabox"){
+        e.currentTarget.className="box";
     }
 
 }
@@ -63,19 +64,12 @@ render(){
                 // Recipies taken from https://www.telegraph.co.uk/recipes/0/30-recipes-you-should-master-by-the-age-of-30/
                 // use this for images
                 recipes.map(reci => 
-                        <div className={this.state.class} onClick={this.mega.bind(this)}>
+                        <div className={this.state.class} onClick={this.mega.bind(this)} id={reci.title}>
                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
                         <div className="box-text">
     
                         <h1>{reci.title}</h1> <p>{reci.time+" to prepare"}</p>
-                        {
-                            reci.ingredients.map(ingredient=>
-                                <p>
-                                    
-                                    {ingredient}
-                                </p>
-                            )
-                        }
+
                     </div>
                     </div>
                 )
