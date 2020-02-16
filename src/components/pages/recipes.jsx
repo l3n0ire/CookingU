@@ -100,16 +100,18 @@ class  Recipes extends Component {
                                             </div>
                                             
                                             <div className ="hidden">
-                                                <div className="ingredients">
-                                                    <h1>Incredients</h1>
+                                                <div className="grid">
+                                                    <div className="ingredients">
+                                                        <h1>Incredients</h1>
 
-                                                    {reci.ingredients.map(i=><p>{i}</p>)} 
-                                                </div>  
+                                                        {reci.ingredients.map(i=><p>{i}</p>)} 
+                                                    </div>  
 
-                                                <div className="steps">
-                                                    <h1>Steps</h1>
-                                                    {reci.steps.map(i=><p>{i}</p>)} 
-                                                </div>         
+                                                    <div className="steps">
+                                                        <h1>Steps</h1>
+                                                        {reci.steps.map(i=><p>{i}</p>)} 
+                                                    </div>  
+                                                </div>       
                                             </div>
                                     </div>
                                 </div>
