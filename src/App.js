@@ -44,7 +44,7 @@ class App extends Component {
   }
   listenScrollEvent = e => {
     if (window.scrollY > 200) {
-      this.setState({ color: '#222' })
+      this.setState({ color: 'black' })
       this.setState({ accent: 'white' })
       this.setState({ textdisplay: 'inline' })
     } else {
@@ -67,9 +67,7 @@ class App extends Component {
             <Header colour={this.state.color} accent={this.state.accent} display={this.state.width < 1024 ? "none" : "flex"} />
             <Sidebar colour={this.state.color} accent={this.state.accent} display={this.state.width < 1024 ? "flex" : "none"} textdisplay={this.state.textdisplay}></Sidebar>
 
-
-            <Route exact path="/" component={Index} />
-            <Route path="/about" component={About} />
+            <Route exact path="/" component={About} />
             <Route path="/recipes" component={Recipes} />
             <Route path="/recipechat" component={RecipeChat} />
             <Footer></Footer>
