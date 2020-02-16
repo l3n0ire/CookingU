@@ -12,7 +12,8 @@ class  Recipes extends Component {
         super(props);
         this.state={
             class:"box",
-            randomItem: {},
+            hiddenClass: "hidden",
+            randomItem: recipes[0]
         }
     }
 
@@ -31,6 +32,7 @@ componentDidMount(){
     
 }
 
+
 handleRandom = () => {
     const keys = Object.keys(dict);
     const randIndex = Math.floor(Math.random() * keys.length);
@@ -38,12 +40,12 @@ handleRandom = () => {
     const recipe = dict[randKey];
     this.setState({randomItem: recipe})
     console.log(this.state.randomItem);
+    this.setState({hiddenClass:"unhidden"})
 }
 
 mega= (e) =>{
     if(e.currentTarget.className=="box"){
         e.currentTarget.className="megabox";
-        
     }
     else  if(e.currentTarget.className=="megabox"){
         e.currentTarget.className="box";
@@ -77,7 +79,16 @@ render(){
             </div>
                 <h1>Randomize</h1>
                 <button onClick={this.handleRandom}>Suprise Me!</button>
-                <h1>Random: {this.state.randomItem.title}</h1>
+                <div className={this.state.hiddenClass}>
+                    <div className={this.state.class} onClick={this.mega.bind(this)} id={this.state.randomItem.title}>
+                            <img src={require("./images/food/"+this.state.randomItem.image+".jpg")} alt="oops"/>
+                            <div className="box-text">
+        
+                            <h1>{this.state.randomItem.title}</h1> <p>{this.state.randomItem.time+" to prepare"}</p>
+
+                        </div>
+                        </div>
+                    </div>
             </div>
         </div>
         </Fragment>

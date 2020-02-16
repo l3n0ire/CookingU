@@ -58,6 +58,13 @@ body{
   grid-column: 1/ span 3;
 }
 
+.hidden {
+  display: none;
+}
+
+.unhidden {
+}
+
 
 .box img{
   width:100%;
