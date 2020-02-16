@@ -9,7 +9,7 @@ function Footer() {
             <footer>
                 <div class="footer-container">
                 
-                    <p class="copyright">&copy; CookingU {(new Date().getFullYear())}</p>
+                    <p class="copyright">&copy; COOKINGU {(new Date().getFullYear())}</p>
                 </div>            
             </footer>
         </Fragment>
