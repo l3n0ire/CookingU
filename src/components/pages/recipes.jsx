@@ -6,8 +6,8 @@ import { render } from 'react-dom';
 
 
 const recipes = data.recipes;
-const [item, setItem] = useState(0);
-const [randomItem, setRandomItem] = useState("");
+// const [item, setItem] = useState(0);
+// const [randomItem, setRandomItem] = useState("");
 var count = 0;
 var dict={};
 
@@ -15,14 +15,16 @@ class  Recipes extends Component {
     constructor(props){
         super(props);
         this.state={
-            class:"box"
+            class:"box",
+            item: 0,
+            randomItem: ""
         }
     }
 
     
     
     handleRandom() {
-        setItem(parseInt(1 + Math.random() * (8 - 1), 10));  
+        this.setState( {item: parseInt(1 + Math.random() * (8 - 1), 10)} );
         this.generateRandom();
         
     }
@@ -41,11 +43,11 @@ class  Recipes extends Component {
         recipes.map(reci => 
             {
                 count++;
-                console.log(count + " " + item)
-                if(count == item) {
+                console.log(count + " " + this.state.item);
+                if(count == this.state.item) {
                     console.log("entered!");
-                    setRandomItem(reci.title);  
-                    console.log(randomItem);
+                    this.setState({randomItem: reci.title});  
+                    console.log(this.state.randomItem);
                 }
             }
         );
