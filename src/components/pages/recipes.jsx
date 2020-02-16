@@ -118,8 +118,11 @@ class  Recipes extends Component {
                         )})
                     }
                     </div>
-                    <h1>Randomize</h1>
-                    <button className="randomButton" onClick={this.handleRandom}>Suprise Me!</button>
+                    <div style={{flexWrap: "wrap", flexDirection: "column"}}>
+                        <h1>Can't Decide what to eat?</h1>
+                        <button className="randomButton" onClick={this.handleRandom}>Suprise Me!</button>
+                    </div>
+                    
                     <div className={this.state.hiddenClass}>
                         <div className="random">
                             <div className="megabox" id={this.state.randomItem.title}>

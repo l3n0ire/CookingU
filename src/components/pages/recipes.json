@@ -1,40 +1,6 @@
 {
     "recipes":[
         {
-            "time":"10 min",
-            "title":"Hot Dog",
-            "image":"hotdog",
-            "ingredients":[
-                    "hot dog",
-                    "bread",    
-                    "Ketchup",
-                    "mustard"  
-            ],
-            "steps": [
-                "1. To be inputed",
-                "2. Will be inputed",
-                "3. Don't worry about it!"]
-            
-        },
-
-        {
-            "time":"20 min",
-            "title":"Pasta",
-            "image":"pasta",
-            "ingredients":[
-                "Pasta",
-                "Tomato",
-                "Meat",
-                "Salt",
-                "Cheese" 
-            ],
-            "steps": [
-                "1. To be inputed",
-                "2. Will be inputed",
-                "3. Don't worry about it!"]  
-        },
-
-        {
             "time":"20 min",
             "title":"Spaghetti with garlic, chilli and parsley ",
             "image":"spaghettiwithgarlic,chilliandparsley",
