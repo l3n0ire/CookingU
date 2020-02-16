@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Playfair+Display|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 *{
   margin:0;
   padding:0;
@@ -24,18 +24,6 @@ body{
   padding: 1%;
 }
 
-.randomDiv {
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-.randomBox {
-  margin-bottom: 2em;
-  background-color: #fff;
-  border: 1px #d3d3d3 solid;
-}
-
 .container{
   padding: 3vh 8vw;
   padding-bottom: 10vh;
@@ -44,13 +32,11 @@ body{
 .container h1{
   font-size: 3em;
   margin: 0.75em 0;
-  font-family: 'Hind Siliguri', sans-serif;
   text-align: left;
 
 }
 .container p{
   font-size: 1.3em;
-  font-family: 'Hind Siliguri', sans-serif;
 }
 .welcome-container{
   height:100vh;
@@ -81,7 +67,7 @@ body{
   border: 1px #d3d3d3 solid;
   padding:1em;
   grid-column: 1/ span 3;
-  
+  z-index: 3;
 }
 .megabox .grid{
   display: grid;
@@ -117,6 +103,7 @@ body{
   height:4em;
   width:8em;
   padding:1em;
+  border-radius: 10px;
   background-color: #222;
   color:white;
   margin: 2em 0;
@@ -129,7 +116,7 @@ body{
   
 }
 .hidden {
-  grid-column: auto/ span 2;
+  grid-column: 1/ span 2;
 
   display: none;
 

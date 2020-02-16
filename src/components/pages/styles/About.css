@@ -1,0 +1,29 @@
+.about-container 
+{
+    background-color: black;
+    padding: 15vh;
+    display: flex;
+    padding-bottom: 10vh;
+    line-height: 2.5em;
+    color: white;
+    
+}
+
+.content-box
+{
+    height: flex;
+    width: 100%;
+}
+
+.content-text
+{
+    color: white;
+    font-size: 2em;
+
+}
+
+
+.space 
+{
+    height: 25vh;
+}
