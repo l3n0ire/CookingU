@@ -29,6 +29,7 @@ header{
     padding:1em 5vw;    
     align-items : center;
     justify-content: center;
+    z-index: 100;
 }
 .title{
     color:#fff;

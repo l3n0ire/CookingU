@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import  data from './recipes.json'
-import './styles/Comps.css'
+import './styles/Recipes.css'
 import { Fragment } from 'react';
 
 
@@ -13,7 +13,8 @@ class  Recipes extends Component {
         this.state={
             class:"box",
             hiddenClass: "hidden",
-            randomItem: recipes[0]
+            randomItem: recipes[0],
+            focus: "hidden"
         }
     }
 
@@ -59,91 +60,71 @@ render(){
         <Fragment>
         <div>
             <div className="welcome-container">
-            <h1>Recipes</h1>
+                <h1>Recipes</h1>
             </div>
             
             <div className="container">
-            <div className="box-row">
-            {
-                // Recipies taken from https://www.telegraph.co.uk/recipes/0/30-recipes-you-should-master-by-the-age-of-30/
-                // use this for images
-                recipes.map(reci => 
+                <div className="box-row">
+                {
+                    // Recipies taken from https://www.telegraph.co.uk/recipes/0/30-recipes-you-should-master-by-the-age-of-30/
+                    // use this for images
+                    recipes.map(reci => 
                         <div className={this.state.class} onClick={this.mega.bind(this)} id={reci.title}>
-                        <div className="grid">
-                        <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
-    
-                        <div className="reciTitle">
-                            <h1>{reci.title}</h1> 
-                            <p>{reci.time+" to prepare"}</p>
+                            <div className="grid">
+                                <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
+                                    <div className="reciTitle">
+                                        <h1>{reci.title}</h1> 
+                                        <p>{reci.time+" to prepare"}</p>
+                                    </div>
+                                    
+                                    <div className ="hidden">
+                                        <div className="ingredients">
+                                            <h1>Incredients</h1>
+
+                                            {reci.ingredients.map(i=><p>{i}</p>)} 
+                                        </div>  
+
+                                        <div className="steps">
+                                            <h1>Steps</h1>
+                                            {reci.steps.map(i=><p>{i}</p>)} 
+                                        </div>         
+                                    </div>
+                            </div>
                         </div>
-                    <div className ="hidden">
-                            <div className="ingredients">
-                                <h1>Incredients</h1>
-
-                                    {
-
-                                        reci.ingredients.map(i=>
-                                            <p>{i}</p>)
-                                        } 
-                            </div>  
-
-                            <div className="steps">
-                                <h1>Steps</h1>
-
-                                    {
-
-                                        reci.steps.map(i=>
-                                            <p>{i}</p>)
-                                        } 
-                            </div>         
-                        </div>
-                    </div>
-                    </div>
-                )
-            }
-            </div>
+                    )
+                }
+                </div>
                 <h1>Randomize</h1>
                 <button className="randomButton" onClick={this.handleRandom}>Suprise Me!</button>
                 <div className={this.state.hiddenClass}>
                     <div className="random">
-                    <div className="megabox" id={this.state.randomItem.title}>
-                    <div className="grid">
-                            <img src={require("./images/food/"+this.state.randomItem.image+".jpg")} alt="oops"/>
-                            <div className="reciTitle">
-        
-                            <h1>{this.state.randomItem.title}</h1> <p>{this.state.randomItem.time+" to prepare"}</p>
+                        <div className="megabox" id={this.state.randomItem.title}>
+                            <div className="grid">
+                                <img src={require("./images/food/"+this.state.randomItem.image+".jpg")} alt="oops"/>
+                                    <div className="reciTitle">
+                                        <h1>{this.state.randomItem.title}</h1> <p>{this.state.randomItem.time+" to prepare"}</p>
 
-                        </div> {/*Box Text*/}
+                                    </div> {/*Box Text*/}
 
-                            <div className="ingredients">
-                                <h1>Incredients</h1>
+                                    <div className="ingredients">
+                                        <h1>Incredients</h1>
 
-                                    {
+                                        {this.state.randomItem.ingredients.map(i=><p>{i}</p>)} 
+                                    </div>  {/*Ingredient*/}
 
-                                        this.state.randomItem.ingredients.map(i=>
-                                            <p>{i}</p>)
-                                        } 
-                            </div>  {/*Ingredient*/}
+                                    <div className="steps">
+                                        <h1>Steps</h1>
 
-                            <div className="steps">
-                                <h1>Steps</h1>
-
-                                    {
-
-                                        this.state.randomItem.steps.map(i=>
-                                            <p>{i}</p>)
-                                        } 
-                            </div>  {/*Steps*/}       
-                        </div>
-                        </div>
+                                        {this.state.randomItem.steps.map(i=><p>{i}</p>)} 
+                                    </div>  {/*Steps*/}       
+                            </div>
                         </div>
                     </div>
+                 </div>
             </div>
         </div>
-        </Fragment>
-    )
-}
-}
+    </Fragment>
+)}}
 
 export default Recipes
 

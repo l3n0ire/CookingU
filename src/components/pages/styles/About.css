@@ -11,7 +11,7 @@
 
 .content-box
 {
-    height: 100vh;
+    height: flex;
     width: 100%;
 }
 
