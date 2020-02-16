@@ -112,7 +112,7 @@ render(){
         
                             <h1>{this.state.randomItem.title}</h1> <p>{this.state.randomItem.time+" to prepare"}</p>
 
-                        </div>
+                        </div> {/*Box Text*/}
 
                         <div className ="hidden">
                             <div className="ingredients">
@@ -120,20 +120,20 @@ render(){
 
                                     {
 
-                                        reci.ingredients.map(i=>
+                                        this.state.randomItem.ingredients.map(i=>
                                             <p>{i}</p>)
                                         } 
-                            </div>  
+                            </div>  {/*Ingredient*/}
 
                             <div className="steps">
                                 <h1>Steps</h1>
 
                                     {
 
-                                        reci.steps.map(i=>
+                                        this.state.randomItem.steps.map(i=>
                                             <p>{i}</p>)
                                         } 
-                            </div>         
+                            </div>  {/*Steps*/}       
                         </div>
                         </div>
                         </div>
