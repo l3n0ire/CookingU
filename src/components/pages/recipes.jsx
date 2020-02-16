@@ -13,7 +13,9 @@ class  Recipes extends Component {
         this.state={
             class:"box",
             hiddenClass: "hidden",
-            randomItem: recipes[0]
+            randomItem: recipes[0],
+            
+
         }
     }
 
@@ -46,9 +48,13 @@ handleRandom = () => {
 mega= (e) =>{
     if(e.currentTarget.className=="box"){
         e.currentTarget.className="megabox";
+        e.currentTarget.querySelector('.hidden').style.display ="block";
+       
     }
     else  if(e.currentTarget.className=="megabox"){
         e.currentTarget.className="box";
+        e.currentTarget.querySelector('.hidden').style.display ="none";
+
     }
 
 }
@@ -68,11 +74,22 @@ render(){
                 recipes.map(reci => 
                         <div className={this.state.class} onClick={this.mega.bind(this)} id={reci.title}>
                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
+                        
                         <div className="box-text">
-    
-                        <h1>{reci.title}</h1> <p>{reci.time+" to prepare"}</p>
+                        <div>
+                        <h1>{reci.title}</h1> 
+                        <p>{reci.time+" to prepare"}</p>
+                        </div>
+                    
+                    <div className ="hidden">
+                            {
+                                
+                                reci.ingredients.map(i=>
 
-                    </div>
+                                    <p>{i}</p>)
+                            } 
+                            </div>          
+                        </div>
                     </div>
                 )
             }

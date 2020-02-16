@@ -56,11 +56,13 @@ body{
   background-color: #fff;
   border: 1px #d3d3d3 solid;
   grid-column: 1/ span 3;
+  padding:2em;
 }
 
 .hidden {
   display: none;
 }
+
 
 .unhidden {
 }
@@ -73,9 +75,10 @@ body{
 }
 
 .megabox img{
-  width:100%;
-  margin:0;
-  max-height: 80vh;
+  width:30em;
+  height: auto;
+  float:left;
+  max-height: 50vh;
 }
 
 .box-text{
@@ -83,10 +86,25 @@ body{
   padding:1.5em;
   padding-bottom: 3em;
 }
+
+.megabox .box-text{
+  text-align: center;
+  margin:-1em 0;
+  padding:1.5em;
+  padding-bottom: 3em;
+  
+}
+
 .box-text h1{
   font-size: 2em;
   margin-top:0;
   margin-bottom:0.5em;
+}
+.megabox .box-text h1{
+  font-size: 5em;
+  line-height: 1.2em;
+  margin:none;
+  text-align:center;
 }
 .box-text p{
   font-size: 1.3em;
