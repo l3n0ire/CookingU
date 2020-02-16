@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Speech from 'react-speech';
 
 export default class ChatBubble extends Component {
 
@@ -6,7 +7,7 @@ export default class ChatBubble extends Component {
         const props = this.props;
         return (
             <div key={`${props.className}-${props.i}`} className={`${props.className} chat-bubble`}>
-              <span className="chat-content">{props.text}</span>
+                <span className="chat-content">{props.text}</span>
             </div>
         )
     }

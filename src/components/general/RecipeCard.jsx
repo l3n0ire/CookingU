@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 
 export default class RecipeCard extends Component {
+
+    
     render() {
         return (
             <div className="recipeCard">
                 <div className="equipment">{
                     this.props.equipment.map(function (item, i) {
-                        return <img key={i} src={`https://spoonacular.com/cdn/ingredients_${SIZE}/${image}`} alt="" />;
+                        return <img key={i} src={`https://spoonacular.com/cdn/ingredients_{size}/{img}`} alt="" />;
                     })
                 }
                 </div>

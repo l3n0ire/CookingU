@@ -34,7 +34,7 @@ html, body {
 
   .conversation-view {
     width: 100%;
-    max-height: 600px;
+    height: 600px;
     padding: 20px 40px;
     background-color: #e5ddd5;
     overflow-y: scroll;
