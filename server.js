@@ -29,13 +29,11 @@ require('dotenv').config({ path: 'variables.env' });
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const path = require('path');
 const cors = require('cors');
 const serverless = require('serverless-http');
 const processMessage = require('./process-message');
 
 const app = express();
-const router = express.Router();
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -45,10 +43,6 @@ app.post('/chat', (req, res) => {
   const { message } = req.body;
   processMessage(message);
 });
-
-app.use(bodyParser.json());
-app.use('/.netlify/functions/server', router);  // path must route to lambda
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 module.exports = app;
 module.exports.handler = serverless(app);

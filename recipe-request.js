@@ -32,16 +32,11 @@ const getRecipeInfo = (recipe) => {
             }
         })
         .then((response) => {
-            return response.json() // << This is the problem
+            return response.json()
         })
         .then((responseData) => {
-            console.log(responseData.results[0].analyzedInstructions[0].steps);
-            pusher.trigger('bot', 'give-instruction', {
-                instructions: `${responseData.results[0].analyzedInstructions[0].steps}`,
-            });
-            return pusher.trigger('bot', 'bot-response', {
-                message: `Okay, lets make ${recipe}`,
-            });
+            //console.log(responseData.results[0].analyzedInstructions[0].steps);
+            return pusher.trigger('bot', 'give-instruction', { instructions: responseData.results[0].analyzedInstructions[0].steps, message: `Okay, lets make ${recipe}` });
         })
         .then(data => { })
         .catch(error => console.log(error));

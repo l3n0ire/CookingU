@@ -69,19 +69,16 @@ const processMessage = message => {
     .detectIntent(request)
     .then(responses => {
       const result = responses[0].queryResult;
-      //console.log(hardcodeTest)
       console.log(result.intent.displayName)
       if (result.intent.displayName === "next-step") {
-        //console.log(result.intent.displayName)
         return pusher.trigger('bot', 'next-instruction', {
           message: result.fulfillmentText,
         });
       }
       else if (result.intent.displayName === "detect-recipe") {
-        //console.log(result.intent.displayName)
         const recipe = result.parameters.fields['recipes'].stringValue;
-        return pusher.trigger('bot', 'give-instruction', { instructions: hardcodeTest, message: `Okay, lets make ${recipe}` });
-        //return getRecipeInfo(recipe);
+        //return pusher.trigger('bot', 'give-instruction', { instructions: hardcodeTest, message: `Okay, lets make ${recipe}` });
+        return getRecipeInfo(recipe);
       }
       else if (result.intent.displayName === "exit-recipe") {
         return pusher.trigger('bot', 'exit-instructions', {

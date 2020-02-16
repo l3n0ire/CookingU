@@ -11,9 +11,9 @@ export default class RecipeChat extends Component {
         this.state = {
             userMessage: '',
             conversation: [],
-            equipment: ["thing1", "thing2"],
+            equipment: [],
             ingredients: [],
-            currentInstruction: ["heres an instruction"],
+            currentInstruction: [],
             instructions: [],
             currentI: 0,
             hasRecipe: false,
