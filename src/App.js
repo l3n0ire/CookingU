@@ -44,7 +44,7 @@ class App extends Component {
   }
   listenScrollEvent = e => {
     if (window.scrollY > 200) {
-      this.setState({ color: 'green' })
+      this.setState({ color: '#222' })
       this.setState({ accent: 'white' })
       this.setState({ textdisplay: 'inline' })
     } else {
