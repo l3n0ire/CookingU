@@ -1,14 +1,10 @@
-import React, {useState, Component} from 'react'
+import React, { Component } from 'react'
 import  data from './recipes.json'
 import './styles/Comps.css'
-import {Fragment} from 'react';
-import { render } from 'react-dom';
+import { Fragment } from 'react';
 
 
 const recipes = data.recipes;
-// const [item, setItem] = useState(0);
-// const [randomItem, setRandomItem] = useState("");
-var count = 0;
 var dict={};
 
 class  Recipes extends Component {
@@ -16,46 +12,34 @@ class  Recipes extends Component {
         super(props);
         this.state={
             class:"box",
-            item: 0,
-            randomItem: ""
+            randomItem: {},
         }
     }
 
-    
-    
-    handleRandom() {
-        this.setState( {item: parseInt(1 + Math.random() * (8 - 1), 10)} );
-        this.generateRandom();
-        
-    }
     makedict = () =>{
         recipes.map(function(reci)
             {
                 dict[reci.title]=reci;
-                console.log(dict[reci.title].time);
             }
             
         
         )
     }
 
-   generateRandom() {
-        recipes.map(reci => 
-            {
-                count++;
-                console.log(count + " " + this.state.item);
-                if(count == this.state.item) {
-                    console.log("entered!");
-                    this.setState({randomItem: reci.title});  
-                    console.log(this.state.randomItem);
-                }
-            }
-        );
-        count = 0;
-    }
 componentDidMount(){
     this.makedict();
+    
 }
+
+handleRandom = () => {
+    const keys = Object.keys(dict);
+    const randIndex = Math.floor(Math.random() * keys.length);
+    const randKey = keys[randIndex];
+    const recipe = dict[randKey];
+    this.setState({randomItem: recipe})
+    console.log(this.state.randomItem);
+}
+
 render(){
     return (
         <Fragment>
@@ -88,9 +72,9 @@ render(){
                 )
             }
             </div>
-            <h1>Randomize</h1>
-            <button onClick={this.handleRandom}>Suprise Me!</button>
-            <h1>Random: {this.randomItem}</h1>
+                <h1>Randomize</h1>
+                <button onClick={this.handleRandom}>Suprise Me!</button>
+                <h1>Random: {this.state.randomItem.time}</h1>
             </div>
         </div>
         </Fragment>
