@@ -8,8 +8,8 @@ function Header(props) {
             <Link className="title" to="/"> <span style={{'color': props.accent}}>CookingU</span></Link>
             <div className="link-container">
                 <Link className="link-style" to='/'>Home</Link>
-                <Link className="link-style" to='/recipes'>Recipes</Link>
                 <Link className="link-style" to='/about'>About</Link>
+                <Link className="link-style" to='/recipes'>Recipes</Link>
             </div>
 
         </header>
