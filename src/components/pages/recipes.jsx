@@ -46,6 +46,7 @@ handleRandom = () => {
 mega= (e) =>{
     if(e.currentTarget.className=="box"){
         e.currentTarget.className="megabox";
+            
     }
     else  if(e.currentTarget.className=="megabox"){
         e.currentTarget.className="box";

@@ -5,13 +5,13 @@
 }
 
 .link-style{
-    color:#fff;
+    color:#ffffff;
     text-decoration:none;
     margin:auto;
     padding-right:5vw;
 }
 .link-container{
-    color:#fff;
+    color:#ffffff;
     text-decoration:none;
     margin:auto;    
     flex-basis:50%;
@@ -19,11 +19,11 @@
 header{
     color:#fff;
     height :5em;
-    width: 100vw;
+    width: 140vw;
     position: fixed;
     display: flex;
     transition: background 0.5s;
-    padding:1em 8vw;    
+    padding:1em 5vw;    
     align-items : center;
     justify-content: center;
 }
