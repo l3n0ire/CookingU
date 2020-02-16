@@ -73,16 +73,9 @@ body{
 }
 
 .megabox img{
-<<<<<<< HEAD
   width:100%;
   margin:0;
   max-height: 80vh;
-=======
-  width:30em;
-  height: auto;
-  float:left;
-  max-height: 50vh;
->>>>>>> parent of fa8133d... style
 }
 
 .box-text{
@@ -95,15 +88,6 @@ body{
   margin-top:0;
   margin-bottom:0.5em;
 }
-<<<<<<< HEAD
-=======
-.megabox .box-text h1{
-  font-size: 5em;
-  line-height: 1.2em;
-  margin:none;
-  text-align:center;
-}
->>>>>>> parent of fa8133d... style
 .box-text p{
   font-size: 1.3em;
 }
