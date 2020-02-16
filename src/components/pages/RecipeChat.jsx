@@ -4,6 +4,7 @@ import Pusher from 'pusher-js';
 import ChatBubble from '../general/ChatBubble';
 import RecipeCard from '../general/RecipeCard';
 import './styles/RecipeChat.css';
+import cookingMa from './images/cooking-ma.jpeg'
 
 export default class RecipeChat extends Component {
     constructor(props) {
@@ -144,13 +145,19 @@ export default class RecipeChat extends Component {
             <ChatBubble key={index} text={e.text} i={index} className={e.user} />
         );
 
-        const instruct = Array.isArray(this.state.currentInstruction) && this.state.currentInstruction.map((item, k) => 
+        const instruct = Array.isArray(this.state.currentInstruction) && this.state.currentInstruction.map((item, k) =>
             <RecipeCard key={k} instruction={item} equipment={this.state.equipment} ingredients={this.state.ingredients} />
         );
 
         return (
             <div>
-                <h1>CookingU Cooks With U</h1>
+                <h1>Cooking Ma<img src={cookingMa} alt="Cooking Ma" style={{
+                    display: 'inline-block',
+                    marginLeft: 'auto',
+                    marginRight: 'auto',
+                    width: '100px',
+                }} /></h1>
+
                 <div className="container">
                     <div className="chat-window">
                         <div className="conversation-view">{chat}</div>
