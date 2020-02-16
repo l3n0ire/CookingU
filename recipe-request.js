@@ -35,11 +35,13 @@ const getRecipeInfo = (recipe) => {
             return response.json() // << This is the problem
         })
         .then((responseData) => {
-            console.log(responseData.results[0].analyzedInstructions.steps[3]);
-            for(const instr of responseData.results[0].analyzedInstructions){
-                pusher.trigger('bot', 'bot-response', { message: `Here is the ID: ${instr.steps[3]}` });
-            }
-            return responseData;
+            console.log(responseData.results[0].analyzedInstructions[0].steps);
+            pusher.trigger('bot', 'give-instruction', {
+                instructions: `${responseData.results[0].analyzedInstructions[0].steps}`,
+            });
+            return pusher.trigger('bot', 'bot-response', {
+                message: `Okay, lets make ${recipe}`,
+            });
         })
         .then(data => { })
         .catch(error => console.log(error));
