@@ -78,7 +78,7 @@ body{
   width:30em;
   height: auto;
   float:left;
-  max-height: 50vh;
+  max-width: 70vw;
 }
 
 .box-text{
@@ -100,11 +100,27 @@ body{
   margin-top:0;
   margin-bottom:0.5em;
 }
-.megabox .box-text h1{
+
+.megabox .recipeTitle{
+  text-align: center;
+  height:20em;
+  display:block
+}
+.megabox .recipeTitle h1{
   font-size: 5em;
   line-height: 1.2em;
   margin:none;
   text-align:center;
+}
+.box .recipeTitle{
+  margin:-1em 0;
+  padding:1.5em;
+  padding-bottom: 3em;
+
+}
+.ingredients{
+  flex:left;
+
 }
 .box-text p{
   font-size: 1.3em;
