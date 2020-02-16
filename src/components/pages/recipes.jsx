@@ -74,7 +74,7 @@ render(){
             </div>
                 <h1>Randomize</h1>
                 <button onClick={this.handleRandom}>Suprise Me!</button>
-                <h1>Random: {this.state.randomItem.time}</h1>
+                <h1>Random: {this.state.randomItem.title}</h1>
             </div>
         </div>
         </Fragment>
