@@ -107,8 +107,9 @@ render(){
                 <div className={this.state.hiddenClass}>
                     <div className="random">
                     <div className={this.state.class} onClick={this.mega.bind(this)} id={this.state.randomItem.title}>
+                    <div className="grid">
                             <img src={require("./images/food/"+this.state.randomItem.image+".jpg")} alt="oops"/>
-                            <div className="box-text">
+                            <div className="reciTitle">
         
                             <h1>{this.state.randomItem.title}</h1> <p>{this.state.randomItem.time+" to prepare"}</p>
 
@@ -134,6 +135,7 @@ render(){
                                             <p>{i}</p>)
                                         } 
                             </div>  {/*Steps*/}       
+                        </div>
                         </div>
                         </div>
                         </div>
