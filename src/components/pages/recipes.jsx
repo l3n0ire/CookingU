@@ -96,7 +96,7 @@ class  Recipes extends Component {
                                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
                                             <div className="reciTitle">
                                                 <h1>{reci.title}</h1> 
-                                                <p>{reci.time+" to prepare"}</p>
+                                                <p>{"Time to prepare: " + reci.time}</p>
                                             </div>
                                             
                                             <div className ="hidden">
