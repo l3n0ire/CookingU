@@ -113,7 +113,21 @@ body{
   
 
 }
+.randomButton{
+  height:4em;
+  width:8em;
+  padding:1em;
+  background-color: #222;
+  color:white;
+  margin: 2em 0;
+  font-size: 1.5em;
 
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-feature-settings: "liga" 0, "clig" 0;
+     -moz-font-feature-settings: "liga" 0, "clig" 0;
+          font-feature-settings: "liga" 0, "clig" 0;
+  
+}
 .hidden {
   grid-column: auto/ span 2;
 

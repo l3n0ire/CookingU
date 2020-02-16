@@ -103,7 +103,7 @@ render(){
             }
             </div>
                 <h1>Randomize</h1>
-                <button onClick={this.handleRandom}>Suprise Me!</button>
+                <button className="randomButton" onClick={this.handleRandom}>Suprise Me!</button>
                 <div className={this.state.hiddenClass}>
                     <div className="random">
                     <div className={this.state.class} onClick={this.mega.bind(this)} id={this.state.randomItem.title}>
