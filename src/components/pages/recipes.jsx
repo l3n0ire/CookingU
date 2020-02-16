@@ -44,6 +44,9 @@ mega= (e) =>{
     if(e.target.className=="box"){
         e.target.className="megabox";
     }
+    else  if(e.target.className=="megabox"){
+        e.target.className="box";
+    }
 
 }
 render(){
