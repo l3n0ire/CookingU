@@ -56,7 +56,6 @@ export default class RecipeChat extends Component {
         });
 
         channel.bind('give-instruction', data => {
-            console.log(data);
             if (!this.state.hasRecipe) {
                 this.setState({
                     hasRecipe: true,
@@ -78,8 +77,6 @@ export default class RecipeChat extends Component {
                 if (this.state.currentI + 1 < this.state.instructions.length) {
                     let stringNext = (this.state.instructions[this.state.currentI + 1].step).toString()
                     let currentArray = this.state.currentInstruction
-                    console.log(currentArray)
-                    console.log(stringNext)
                     this.setState({
                         currentInstruction: [stringNext, ...currentArray],
                         currentI: this.state.currentI + 1,
