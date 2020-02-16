@@ -12,34 +12,7 @@ function About() {
                 <h1> About </h1>
             </div>
             <div className="container">
-                <h1>Our team</h1>
-                <div className="box-row">
-                    <div className="box">
-                        <img src={president} alt="oops"/>
-                        <div className="box-text">
-                            <h1>President</h1>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <img src={vice_president} alt="oops"/>
-                        <div className="box-text">
-                            <h1>Vice-President</h1>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <img src={treasurer} alt="oops"/>
-                        <div className="box-text">
-                            <h1>Treasurer</h1>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <img src={secretary} alt="oops"/>
-                        <div className="box-text">
-                            <h1>Secretary</h1>
-                        </div>
-
-                    </div>
-                </div>
+                
             </div>
         </Fragment>
     )
