@@ -40,6 +40,12 @@ handleRandom = () => {
     console.log(this.state.randomItem);
 }
 
+mega= (e) =>{
+    if(e.target.className=="box"){
+        e.target.className="megabox";
+    }
+
+}
 render(){
     return (
         <Fragment>
@@ -54,7 +60,7 @@ render(){
                 // Recipies taken from https://www.telegraph.co.uk/recipes/0/30-recipes-you-should-master-by-the-age-of-30/
                 // use this for images
                 recipes.map(reci => 
-                        <div className={this.state.class}>
+                        <div className={this.state.class} onClick={this.mega.bind(this)}>
                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
                         <div className="box-text">
     
