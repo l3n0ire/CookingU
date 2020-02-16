@@ -79,7 +79,7 @@ body{
   border: 1px #d3d3d3 solid;
   padding:1em;
   grid-column: 1/ span 3;
-  
+  z-index: 3;
 }
 .megabox .grid{
   display: grid;
