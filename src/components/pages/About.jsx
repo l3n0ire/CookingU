@@ -7,7 +7,7 @@ function About() {
     return (
         <Fragment>
             <div className="welcome-container">
-                <h1> About </h1>
+                <h1> COOKINGU </h1>
             </div>
             <div className="about-container">
                 <div className="content-box">
