@@ -1,5 +1,6 @@
 const Dialogflow = require('dialogflow');
 const Pusher = require('pusher');
+const getRecipeInfo = require('./recipe-request')
 
 // You can find your project ID in your Dialogflow agent settings
 const projectId = 'hackthevalleyiv'; //https://dialogflow.com/docs/agents#settings
@@ -40,6 +41,14 @@ const processMessage = message => {
     .detectIntent(request)
     .then(responses => {
       const result = responses[0].queryResult;
+
+      if (result.intent.displayName = "detect-recipe") {
+        //console.log(result)
+        const recipe = result.parameters.fields['recipe'].stringValue;
+        return getRecipeInfo(recipe);
+      }
+      //console.log(result.intent.displayName)
+      //console.log(result)
       return pusher.trigger('bot', 'bot-response', {
         message: result.fulfillmentText,
       });
