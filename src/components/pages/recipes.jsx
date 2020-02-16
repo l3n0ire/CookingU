@@ -102,7 +102,7 @@ class  Recipes extends Component {
                                             <div className ="hidden">
                                                 <div className="grid">
                                                     <div className="ingredients">
-                                                        <h1>Incredients</h1>
+                                                        <h1>Ingredients</h1>
 
                                                         {reci.ingredients.map(i=><p>{i}</p>)} 
                                                     </div>  
