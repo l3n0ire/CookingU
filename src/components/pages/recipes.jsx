@@ -68,9 +68,23 @@ render(){
                 recipes.map(reci => 
                         <div className={this.state.class} onClick={this.mega.bind(this)} id={reci.title}>
                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
+<<<<<<< HEAD
                         <div className="box-text">
     
                         <h1>{reci.title}</h1> <p>{reci.time+" to prepare"}</p>
+=======
+                        
+                        <div className="box-text">
+                        <div>
+                        <h1>{reci.title}</h1> 
+                        <p>{reci.time+" to prepare"}</p>
+                        </div>
+                    
+                    <div className ="hidden">
+                            {
+                                
+                                reci.ingredients.map(i=>
+>>>>>>> parent of fa8133d... style
 
                     </div>
                     </div>
