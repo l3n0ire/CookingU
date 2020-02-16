@@ -69,24 +69,35 @@ render(){
                 // use this for images
                 recipes.map(reci => 
                         <div className={this.state.class} onClick={this.mega.bind(this)} id={reci.title}>
+                        <div className="grid">
                         <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
-                        <div className="box-text">
     
-                        <div>
-                        <h1>{reci.title}</h1> 
-                        <p>{reci.time+" to prepare"}</p>
+                        <div className="reciTitle">
+                            <h1>{reci.title}</h1> 
+                            <p>{reci.time+" to prepare"}</p>
                         </div>
-
                     <div className ="hidden">
-                            {
+                            <div className="ingredients">
+                                <h1>Incredients</h1>
 
-                                reci.ingredients.map(i=>
-                                    <p>{i}</p>)
-                                } 
-                                </div>          
-                            </div>
+                                    {
 
+                                        reci.ingredients.map(i=>
+                                            <p>{i}</p>)
+                                        } 
+                            </div>  
 
+                            <div className="steps">
+                                <h1>Steps</h1>
+
+                                    {
+
+                                        reci.steps.map(i=>
+                                            <p>{i}</p>)
+                                        } 
+                            </div>         
+                        </div>
+                    </div>
                     </div>
                 )
             }
@@ -94,12 +105,36 @@ render(){
                 <h1>Randomize</h1>
                 <button onClick={this.handleRandom}>Suprise Me!</button>
                 <div className={this.state.hiddenClass}>
+                    <div className="random">
                     <div className={this.state.class} onClick={this.mega.bind(this)} id={this.state.randomItem.title}>
                             <img src={require("./images/food/"+this.state.randomItem.image+".jpg")} alt="oops"/>
                             <div className="box-text">
         
                             <h1>{this.state.randomItem.title}</h1> <p>{this.state.randomItem.time+" to prepare"}</p>
 
+                        </div>
+
+                        <div className ="hidden">
+                            <div className="ingredients">
+                                <h1>Incredients</h1>
+
+                                    {
+
+                                        reci.ingredients.map(i=>
+                                            <p>{i}</p>)
+                                        } 
+                            </div>  
+
+                            <div className="steps">
+                                <h1>Steps</h1>
+
+                                    {
+
+                                        reci.steps.map(i=>
+                                            <p>{i}</p>)
+                                        } 
+                            </div>         
+                        </div>
                         </div>
                         </div>
                     </div>
