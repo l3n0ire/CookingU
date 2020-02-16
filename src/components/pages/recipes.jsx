@@ -45,21 +45,7 @@ class  Recipes extends Component {
         this.setState({hiddenClass:"unhidden"})
     }
 
-    mega = (e) => 
-    {
-        if(e.currentTarget.className=="box")
-        {
-            e.currentTarget.className="megabox";
-            e.currentTarget.querySelector('.hidden').style.display ="block";
-            this.setState({focus: "inline"});
-        }
-        else 
-        {
-            e.currentTarget.className="box";
-            e.currentTarget.querySelector('.hidden').style.display ="none";
-            this.setState({focus: "none"});
-        }
-    }
+    
 
     render() 
     {
@@ -77,30 +63,57 @@ class  Recipes extends Component {
                     {
                         // Recipies taken from https://www.telegraph.co.uk/recipes/0/30-recipes-you-should-master-by-the-age-of-30/
                         // use this for images
-                        recipes.map(reci => 
-                            <div className="box" onClick={this.mega.bind(this)} id={reci.title}>
-                                <div className="grid">
-                                    <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
-                                        <div className="reciTitle">
-                                            <h1>{reci.title}</h1> 
-                                            <p>{reci.time+" to prepare"}</p>
-                                        </div>
-                                        
-                                        <div className ="hidden">
-                                            <div className="ingredients">
-                                                <h1>Incredients</h1>
+                        recipes.map(reci => {
+                            
+                            const ref = React.createRef();
 
-                                                {reci.ingredients.map(i=><p>{i}</p>)} 
-                                            </div>  
+                            const handleClick = () => 
+                            {
+                                ref.current.scrollIntoView({behaviour: 'smooth', start: 'block'});
+                                window.scrollBy(0, -100);
+                            }
 
-                                            <div className="steps">
-                                                <h1>Steps</h1>
-                                                {reci.steps.map(i=><p>{i}</p>)} 
-                                            </div>         
-                                        </div>
+                            const mega = (e) => 
+                            {
+                                if(e.currentTarget.className === "box")
+                                {
+                                    e.currentTarget.className="megabox";
+                                    e.currentTarget.querySelector('.hidden').style.display ="block";
+                                    this.setState({focus: "inline"});
+                                }
+                                else 
+                                {
+                                    e.currentTarget.className="box";
+                                    e.currentTarget.querySelector('.hidden').style.display ="none";
+                                    this.setState({focus: "none"});
+                                }
+                                handleClick();
+                            }
+
+                            return(
+                                <div className="box" onClick={mega.bind(this)} ref={ref}>
+                                    <div className="grid">
+                                        <img src={require("./images/food/"+reci.image+".jpg")} alt="oops"/>
+                                            <div className="reciTitle">
+                                                <h1>{reci.title}</h1> 
+                                                <p>{reci.time+" to prepare"}</p>
+                                            </div>
+                                            
+                                            <div className ="hidden">
+                                                <div className="ingredients">
+                                                    <h1>Incredients</h1>
+
+                                                    {reci.ingredients.map(i=><p>{i}</p>)} 
+                                                </div>  
+
+                                                <div className="steps">
+                                                    <h1>Steps</h1>
+                                                    {reci.steps.map(i=><p>{i}</p>)} 
+                                                </div>         
+                                            </div>
+                                    </div>
                                 </div>
-                            </div>
-                        )
+                        )})
                     }
                     </div>
                     <h1>Randomize</h1>
