@@ -24,18 +24,6 @@ body{
   padding: 1%;
 }
 
-.randomDiv {
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-.randomBox {
-  margin-bottom: 2em;
-  background-color: #fff;
-  border: 1px #d3d3d3 solid;
-}
-
 .container{
   padding: 3vh 8vw;
   padding-bottom: 10vh;
@@ -115,6 +103,7 @@ body{
   height:4em;
   width:8em;
   padding:1em;
+  border-radius: 10px;
   background-color: #222;
   color:white;
   margin: 2em 0;
@@ -127,7 +116,7 @@ body{
   
 }
 .hidden {
-  grid-column: auto/ span 2;
+  grid-column: 1/ span 2;
 
   display: none;
 
