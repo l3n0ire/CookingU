@@ -44,13 +44,11 @@ body{
 .container h1{
   font-size: 3em;
   margin: 0.75em 0;
-  font-family: 'Hind Siliguri', sans-serif;
   text-align: left;
 
 }
 .container p{
   font-size: 1.3em;
-  font-family: 'Hind Siliguri', sans-serif;
 }
 .welcome-container{
   height:100vh;
