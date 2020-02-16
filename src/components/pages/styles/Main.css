@@ -12,6 +12,30 @@ body{
   line-height: 1.4;
   background-color: #f6f6f6;
 }
+
+.button {
+  background-color: #222;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-feature-settings: "liga" 0, "clig" 0;
+     -moz-font-feature-settings: "liga" 0, "clig" 0;
+          font-feature-settings: "liga" 0, "clig" 0;
+  line-height: 1.4;
+  padding: 1%;
+}
+
+.randomDiv {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.randomBox {
+  margin-bottom: 2em;
+  background-color: #fff;
+  border: 1px #d3d3d3 solid;
+}
+
 .container{
   padding: 3vh 8vw;
   padding-bottom: 10vh;
@@ -61,10 +85,6 @@ body{
 .hidden {
   display: none;
 }
-
-.unhidden {
-}
-
 
 .box img{
   width:100%;
