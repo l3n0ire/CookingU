@@ -17,7 +17,7 @@ function Index() {
 
         <div className="container">
             <div className="box-row">
-                    <div className="box2">
+                    <div className="megabox">
                         <img src={hotdog} alt="oops"/>
                         <div className="box-text">
                             <h1>Hot Dog</h1>
